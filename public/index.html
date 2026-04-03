@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おこづかい記帳アプリ</title>
+  <link rel="stylesheet" href="UI.css">
+</head>
+<body>
+
+  <header>
+    <h1>おこづかい記帳アプリ</h1>
+  </header>
+
+  <main>
+
+    <!-- 入力フォーム -->
+    <section class="card input-card">
+      <h2>新しい記録</h2>
+
+      <label>金額</label>
+      <input type="number" id="amount" placeholder="例：500">
+
+      <label>種類</label>
+      <select id="type">
+        <option value="income">収入</option>
+        <option value="expense">支出</option>
+      </select>
+
+      <label>日付</label>
+      <input type="date" id="date">
+
+      <label>メモ</label>
+      <input type="text" id="memo" placeholder="例：お菓子">
+
+      <button id="addBtn">追加する</button>
+    </section>
+
+    <!-- 記録一覧 -->
+    <section id="listArea"></section>
+
+    <!-- 合計エリア -->
+    <section class="card total-card">
+      <h2>今月の合計</h2>
+      <p id="total">+0円</p>
+      <p>収入：<span id="incomeTotal">0円</span></p>
+      <p>支出：<span id="expenseTotal">0円</span></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
